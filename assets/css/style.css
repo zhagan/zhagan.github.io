@@ -61,12 +61,13 @@ aside {
 	border-top: 5px #ccc solid;
 	font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
 	height:100%;
+	width:100%;
 	position:relative;
 }
 
 .mainsection{
 	/*clear:both;*/
-	width:550px;
+	width:80%;
 	height:100%;
 	font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
 	position:relative;
@@ -140,7 +141,7 @@ p{
 }
 
 .sidebar{
-	width:270px;
+	width:20%;
 }
 
 .links{
