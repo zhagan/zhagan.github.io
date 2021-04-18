@@ -1,2 +1,3 @@
 # zhagan.github.io
-Simple portfolio HTML CSS
+I said what the hell - let's do an angular version - source code provided in /zackhagan
+
