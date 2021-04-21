@@ -1,5 +1,12 @@
-
-ul, li {
+ul {
+    padding-left: 0px;
+}
+ul, li, a{
     display:inline;
     margin: 3px;
+    color: powderblue
+}
+
+.active {
+    background-color: grey;
 }

@@ -1,11 +1,26 @@
-<div class="bg-dark d-flex">
-    <img width="300" src="../../assets/images/zackPortfolio.jpg">
-    <div class="row mx-2">
+<div class="col-12 d-flex bg-dark">
+    <div class="col-2">
+        <img width="100%" 
+        [style.max-width]="'300px'" 
+        id="portfolio-img" src="../../assets/images/zackPortfolio.jpg">
+    </div>
+    <div class="col-10 mx-2">
         <div class="text-light">
-            <span>
-                Some witty stuff about Zack
-            </span>
+            <h3>Discography</h3>
+        </div>
+        <div class="btn-group">
+            <button type="button" 
+            class="btn btn-secondary"
+            [class.active]="activeAlbum === album"
+            *ngFor="let album of albums"
+            (click)="activeAlbum = album">
+                {{album.title}}
+            </button>
+        </div>
+        <div>
+            <app-album [data]="activeAlbum"></app-album>
         </div>
     </div>
+
     
 </div>

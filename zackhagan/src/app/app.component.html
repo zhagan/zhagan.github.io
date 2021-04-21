@@ -1,16 +1,51 @@
-<div class="col-md-12 py-1 px-3 mx-auto bg-dark">
-  <div class="d-flex text-white">
-    <h1>Zack Hagan</h1>
-    <div class="mx-2 my-auto">
+<div class="col-md-12 py-1 mx-auto bg-dark">
+  <div class="d-flex text-white col-12">
+    <div class="col-2 my-auto">
+      <div class="text-center">
+        <h1>Zack Hagan</h1>
+      </div>
+    </div>
+    <div class="col-6 mx-2 my-auto">
       <ul class="list-horizontal">
-        <li>Developer</li>
-        <li>Musician</li>
+        <li>
+          <a class="nav-link"
+          [routerLinkActive]="['active']"
+           routerLink="code">Developer</a>
+        </li>
+        <li>
+          <a class="nav-link"
+          [routerLinkActive]="['active']"
+          routerLink="music">Musician</a>
+        </li>
       </ul>
     </div>
-    
+    <div class="col-2 my-auto">
+      <ul>
+        <li>
+          <a>
+            <img width="30px" src="../assets/images/if_github_square_107105.png">
+          </a>
+        </li>
+        <li>
+          <a>
+            <img width="30px" src="../assets/images/if_linkedin_square_color_107091.png">
+          </a>
+        </li>
+        <li>
+          <a>
+            <img width="30px" src="../assets/images/if_soundcloud_328070.png">
+          </a>
+        </li>
+        <li>
+          <a>
+            <img width="30px" src="../assets/images/if_facebook_square_107117.png">
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
   
 
 </div>
-<app-musician></app-musician>
 <router-outlet></router-outlet>
+<app-footer></app-footer>
