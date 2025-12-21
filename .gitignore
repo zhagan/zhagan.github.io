@@ -1,1 +1,5 @@
 /zackhagan/node_modules
+/zackhagan/package-lock.json
+/zackhagan/dist
+
+.DSStore
