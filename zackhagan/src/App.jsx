@@ -28,7 +28,7 @@ function App() {
           <div>
             <p className="eyebrow">Producer · Engineer · Designer</p>
             <h2>
-              Brooklyn-born sounds and beautifully crafted digital products by{' '}
+              Denver based sounds and beautifully crafted digital products by{' '}
               <span className="gradient-text">Zack Hagan</span>.
             </h2>
             <p className="muted">
