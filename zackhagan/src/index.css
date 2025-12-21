@@ -158,25 +158,6 @@ a {
   margin: 0;
 }
 
-.pill-row {
-  display: flex;
-  gap: 12px;
-}
-
-.pill {
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.02);
-  transition: all 0.2s ease;
-}
-
-.pill.is-active {
-  border-color: var(--accent);
-  box-shadow: 0 6px 20px rgba(108, 240, 194, 0.2);
-}
-
 .music-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

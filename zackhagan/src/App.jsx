@@ -32,14 +32,8 @@ function App() {
               <span className="gradient-text">Zack Hagan</span>.
             </h2>
             <p className="muted">
-              Pick a lane below to explore the latest releases or peek at the software craft that powers Zack&apos;s creative work.
+              Pick a lane to explore the latest releases or peek at the software craft that powers Zack&apos;s creative work.
             </p>
-          </div>
-          <div className="pill-row">
-            <div className={`pill ${activeTab === 'music' ? 'is-active' : ''}`} onClick={() => setActiveTab('music')}>
-              Musician</div>
-            <div className={`pill ${activeTab === 'dev' ? 'is-active' : ''}`} onClick={() => setActiveTab('dev')}>
-              Developer</div>
           </div>
         </section>
 
