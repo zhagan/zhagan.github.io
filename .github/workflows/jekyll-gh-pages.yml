@@ -37,6 +37,11 @@ jobs:
       - name: Build site into docs
         run: npm run build
 
+      - name: Upload docs as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
   deploy:
     environment:
       name: github-pages
@@ -47,4 +52,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        from: ./docs
