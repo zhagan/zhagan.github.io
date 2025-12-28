@@ -7,7 +7,6 @@ function Header({ activeTab, onNavigate }) {
   return (
     <header className="header">
       <div className="brand">
-        <span className="badge">Portfolio</span>
         <h1>Zack Hagan</h1>
       </div>
       <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label="Toggle navigation">
