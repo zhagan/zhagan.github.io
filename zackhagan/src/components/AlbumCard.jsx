@@ -6,6 +6,7 @@ function AlbumCard({ album }) {
       <div className="album-meta">
         <div>
           <h3>{album.title}</h3>
+        {/*           commment */}
         </div>
         <a className="ghost-link" href={album.bandcamp?.link} target="_blank" rel="noreferrer">
           Listen on Bandcamp ↗
