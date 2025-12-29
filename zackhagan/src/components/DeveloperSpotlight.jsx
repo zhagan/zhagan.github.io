@@ -112,6 +112,10 @@ function DeveloperSpotlight() {
         <p className="muted">
           Zack builds immersive web experiences, data-driven visuals, and reliable APIs. The same curiosity that fuels his music
           practice shows up in his code: thoughtful details, rich textures, and a willingness to experiment.
+          Zack works at the intersection of engineering and music, using AI as both a creative collaborator and a systems tool.
+          He has built AI-driven interfaces that generate, transform, and analyze complex data,
+          with a strong emphasis on usability and intent. Across documents, audio, and interactive UI,
+          Zack focuses on making AI systems feel responsive, legible, and grounded in human goals.
         </p>
         <a className="primary-link" href="mailto:hello@zackhagan.com">
           Start a collaboration <FiExternalLink />
