@@ -2,22 +2,64 @@ import { FiExternalLink, FiGithub, FiLayers, FiMonitor, FiZap } from 'react-icon
 
 const highlights = [
   {
-    title: 'Product-minded engineer',
+    title: 'Design systems builder',
     description:
-      'Thoughtful about the full stack: expressive UI systems, resilient APIs, and cloud automation that fades into the background.',
-    icon: <FiMonitor />
+      'Builds and maintains component systems that scale across teams, products, and frameworks without losing visual or behavioral consistency.',
+    icon: <FiGrid />
   },
   {
-    title: 'Creative technologist',
+    title: 'PDF & document systems specialist',
     description:
-      'Combines experience as a musician with code to ship playful interactions, audiovisual experiments, and generative tools.',
-    icon: <FiZap />
+      'Deep experience turning messy, real-world documents into interactive, inspectable, and repairable user experiences.',
+    icon: <FiFileText />
   },
   {
-    title: 'Systems thinker',
+    title: 'Full-stack problem solver',
     description:
-      'Obsessed with design systems, accessibility, and repeatable workflows that help teams deliver quickly without sacrificing quality.',
-    icon: <FiLayers />
+      'Comfortable moving between frontend, backend, and infrastructure to remove friction and ship end-to-end solutions.',
+    icon: <FiCode />
+  },
+  {
+    title: 'Creative audio engineer',
+    description:
+      'Applies synthesis, MIDI, and audio-routing knowledge to build tools that bridge music hardware, software, and the web.',
+    icon: <FiMusic />
+  },
+  {
+    title: 'Blockchain systems engineer',
+    description:
+      'Designs and ships on-chain programs, wallets, and bots with a focus on correctness, transparency, and real economic behavior.',
+    icon: <FiLink />
+  },
+  {
+    title: 'Workflow automator',
+    description:
+      'Eliminates manual toil through CI/CD, build pipelines, and deployment automation that teams can trust.',
+    icon: <FiRepeat />
+  },
+  {
+    title: 'UX-driven engineer',
+    description:
+      'Treats usability, performance, and accessibility as first-class requirements—not afterthoughts.',
+    icon: <FiUserCheck />
+  },
+  {
+    title: 'Systems modernizer',
+    description:
+      'Refactors legacy platforms into modern, maintainable architectures while keeping production stable.',
+    icon: <FiRefreshCw />
+  },
+  {
+    title: 'Toolmaker at heart',
+    description:
+      'Builds internal tools and interfaces that make complex systems understandable and enjoyable to use.',
+    icon: <FiTool />
+  },
+  {
+    title: 'Curious by default',
+    description:
+      'Continuously explores new platforms—from web frameworks to hardware—to find better ways to build and create.',
+    icon: <FiCompass />
   }
 ]
 
