@@ -1,4 +1,16 @@
-import { FiExternalLink, FiGithub, FiLayers, FiMonitor, FiZap } from 'react-icons/fi'
+import {
+  FiExternalLink, FiGithub, FiLayers, FiMonitor, FiZap
+  FiGrid,
+  FiFileText,
+  FiCode,
+  FiMusic,
+  FiLink,
+  FiRepeat,
+  FiUserCheck,
+  FiRefreshCw,
+  FiTool,
+  FiCompass
+} from 'react-icons/fi'
 
 const highlights = [
   {
