@@ -105,7 +105,6 @@ const projects = [
 
 function DeveloperSpotlight() {
   return (
-    <div className="dev-section">
       <div className="dev-hero">
         <p className="eyebrow">Developer</p>
         <h2>Design-forward software with a musical ear.</h2>
@@ -162,7 +161,6 @@ function DeveloperSpotlight() {
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
