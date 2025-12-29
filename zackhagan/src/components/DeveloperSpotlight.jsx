@@ -1,7 +1,7 @@
+import { useMemo, useState } from 'react'
 import {
   FiExternalLink,
   FiGithub,
-  FiLayers,
   FiMonitor,
   FiZap,
   FiGrid,
@@ -104,6 +104,36 @@ const projects = [
 ]
 
 function DeveloperSpotlight() {
+  const [flippedCards, setFlippedCards] = useState(new Set())
+  const puzzleImage = '/assets/images/zackPortfolio.jpg'
+  const gridColumns = 5
+
+  const puzzleHighlights = useMemo(
+    () =>
+      highlights.map((item, index) => ({
+        ...item,
+        col: index % gridColumns,
+        row: Math.floor(index / gridColumns)
+      })),
+    [gridColumns]
+  )
+
+  const gridRows = useMemo(() => Math.ceil(puzzleHighlights.length / gridColumns), [puzzleHighlights.length, gridColumns])
+
+  const handleFlip = (title) => {
+    setFlippedCards((prev) => {
+      const next = new Set(prev)
+      if (next.has(title)) {
+        next.delete(title)
+      } else {
+        next.add(title)
+      }
+      return next
+    })
+  }
+
+  const allRevealed = flippedCards.size === puzzleHighlights.length
+
   return (
     <div className="dev-section">
       <div className="dev-hero">
@@ -122,14 +152,43 @@ function DeveloperSpotlight() {
         </a>
       </div>
       <div className="dev-right">
+        <div className="puzzle-status">
+          <p className="muted">
+            Flip each highlight tile to reveal a fragment of the full portrait. {flippedCards.size}/
+            {puzzleHighlights.length} revealed{allRevealed ? ' — full image unlocked!' : ''}
+          </p>
+        </div>
         <div className="dev-grid">
-          {highlights.map((item) => (
-            <article className="glass-card" key={item.title}>
-              <div className="icon-circle">{item.icon}</div>
-              <h4>{item.title}</h4>
-              <p className="muted">{item.description}</p>
-            </article>
-          ))}
+          {puzzleHighlights.map((item) => {
+            const isFlipped = flippedCards.has(item.title)
+            return (
+              <article
+                className={`glass-card flip-card ${isFlipped ? 'is-flipped' : ''}`}
+                key={item.title}
+                onClick={() => handleFlip(item.title)}
+              >
+                <div className="flip-inner">
+                  <div className="card-face card-front">
+                    <div className="icon-circle">{item.icon}</div>
+                    <h4>{item.title}</h4>
+                    <p className="muted">{item.description}</p>
+                  </div>
+                  <div
+                    className="card-face card-back puzzle-piece"
+                    style={{
+                      '--tile-col': item.col,
+                      '--tile-row': item.row,
+                      '--tile-cols': gridColumns,
+                      '--tile-rows': gridRows,
+                      backgroundImage: `url(${puzzleImage})`
+                    }}
+                  >
+                    <span className="puzzle-overlay">{item.title}</span>
+                  </div>
+                </div>
+              </article>
+            )
+          })}
         </div>
 
         <div className="dev-projects">
