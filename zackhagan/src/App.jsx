@@ -7,6 +7,7 @@ import { albums } from './data/albums'
 
 function App() {
   const [activeTab, setActiveTab] = useState('music')
+  
   const [activeAlbum, setActiveAlbum] = useState(albums[0])
 
   const albumButtons = useMemo(
