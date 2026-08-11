@@ -81,25 +81,32 @@ const highlights = [
 
 const projects = [
   {
-    name: 'Portfolio & music hub',
-    repo: 'zhagan/zhagan.github.io',
-    description: 'Source code for this circuit-inspired portfolio that blends music and development work.',
-    link: 'https://github.com/zhagan/zhagan.github.io',
-    tags: ['Vite', 'React', 'Design system']
+    name: 'major-midi',
+    repo: 'https://github.com/zhagan/major-midi',
+    page: 'https://zhagan.github.io/major-midi/',
+    description: 'A browser-based MIDI playground for experimenting with notes, harmony, and musical ideas.',
+    tags: ['MIDI', 'Music', 'Web audio']
   },
   {
-    name: 'Open source catalog',
-    repo: 'github.com/zhagan?tab=repositories',
-    description: 'Browse Zack’s public repositories, experiments, and archived prototypes on GitHub.',
-    link: 'https://github.com/zhagan?tab=repositories',
-    tags: ['GitHub', 'Experiments']
+    name: 'sdts',
+    repo: 'https://github.com/zhagan/sdts',
+    page: 'https://zhagan.github.io/sdts/',
+    description: 'An interactive web project that makes its tools and experiments easy to explore right in the browser.',
+    tags: ['Interactive', 'Web', 'Open source']
   },
   {
-    name: 'Automation & gists',
-    repo: 'gist.github.com/zhagan',
-    description: 'Reusable snippets for audio tooling, creative coding, and automation scripts.',
-    link: 'https://gist.github.com/zhagan',
-    tags: ['Scripts', 'Audio', 'Tooling']
+    name: 'CMSS-Trail-Mod',
+    repo: 'https://github.com/zhagan/CMSS-Trail-Mod',
+    page: 'https://zhagan.github.io/CMSS-Trail-Mod/',
+    description: 'A community-made trail modification project, with its source and playable web build available for anyone to explore.',
+    tags: ['Game mod', 'Community', 'Web build']
+  },
+  {
+    name: 'mod',
+    repo: 'https://github.com/zhagan/mod',
+    page: 'https://zhagan.github.io/mod/',
+    description: 'My fork of mod, where I can test changes and share a live version alongside the source.',
+    tags: ['Fork', 'Experiment', 'Open source']
   }
 ]
 
@@ -144,12 +151,11 @@ function DeveloperSpotlight() {
           </div>
           <div className="project-grid">
             {projects.map((project) => (
-              <a className="project-card" href={project.link} key={project.repo} target="_blank" rel="noreferrer">
+              <article className="project-card" key={project.repo}>
                 <div className="project-meta">
                   <h5>{project.name}</h5>
                   <FiGithub size={18} />
                 </div>
-                <p className="repo-link">{project.repo}</p>
                 <p className="muted">{project.description}</p>
                 <div className="tag-row">
                   {project.tags.map((tag) => (
@@ -158,10 +164,15 @@ function DeveloperSpotlight() {
                     </span>
                   ))}
                 </div>
-                <span className="cta">
-                  View on GitHub <FiExternalLink />
-                </span>
-              </a>
+                <div className="project-links">
+                  <a className="cta" href={project.repo} target="_blank" rel="noreferrer">
+                    <FiGithub /> Repository <FiExternalLink />
+                  </a>
+                  <a className="cta project-page-link" href={project.page} target="_blank" rel="noreferrer">
+                    <FiMonitor /> Live project <FiExternalLink />
+                  </a>
+                </div>
+              </article>
             ))}
           </div>
         </div>
